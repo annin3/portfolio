@@ -1,26 +1,54 @@
 <template>
-  <v-app-bar
-    app
-    color="rgba(255, 255, 255, 0)"
-    dense="boolean"
-    flat="boolean"
-  >
-    <v-app-bar-nav-icon v-on:click="drawer = true"></v-app-bar-nav-icon>
-    <v-spacer></v-spacer>
-    <div>English</div>
-  </v-app-bar>
+  <div :class="$style.header">
+    <v-app-bar app color="rgba(255, 255, 255, 0)" dense flat>
+      <v-app-bar-nav-icon v-on:click="drawer = true" :class="$style.nav_icon"></v-app-bar-nav-icon>
+      <v-tabs :class="$style.nav_tabs">
+        <v-tab v-for="(routes, index) in routes" :key="index" :to="routes.path">
+          {{ routes.name }}
+        </v-tab>
+      </v-tabs>
+      <v-spacer></v-spacer>
+      <div>English</div>
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer" fixed temporary>
+      <v-list nav dense>
+        <v-list-item-group>
+          <v-list-item v-for="(routes, index) in routes" :key="index" :to="routes.path">
+            <v-list-item-title>{{ routes.name }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Emit } from 'vue-property-decorator'
+import { Vue, Component, Emit } from "vue-property-decorator";
+import routes from "@/router/routes.ts";
 
 @Component({
-  name: 'AppBar'
+  name: "Header",
 })
-
-export default class AppBar extends Vue {
+export default class Header extends Vue {
+  drawer: boolean = false;
+  routes = routes;
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" module>
+.nav_icon {
+  @include display_pc {
+    display: none !important;
+  }
+}
+.nav_tabs {
+  display: none;
+ 
+  @include display_pc {
+    display: block !important;
+  }
+}
+.header {
+  padding-bottom: 8rem;
+}
 </style>

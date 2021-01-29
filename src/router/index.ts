@@ -1,26 +1,13 @@
-import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
-import Top from '../views/Top.vue'
+import Vue from "vue";
+import VueRouter, { RouteConfig } from "vue-router";
+import routes from "./routes"
 
-Vue.use(VueRouter)
-
-  const routes: Array<RouteConfig> = [
-  {
-    path: '/',
-    name: 'Top',
-    component: Top
-  },
-  {
-    path: '/hello',
-    name: 'Hello',
-    component: () => import('../views/HelloWorld.vue')
-  }
-]
+Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history', 
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
