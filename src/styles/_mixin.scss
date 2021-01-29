@@ -1,0 +1,28 @@
+$sp: 600;
+$tb: 1024;
+ 
+$sp-max: calc($sp - 1)px;
+$tb-min: $sp + px;
+$tb-max: calc($tb - 1)px;
+$pc-min: $tb + px;
+ 
+/* PC */
+@mixin display_pc {
+  @media (min-width: $pc-min) {
+    @content;
+  }
+}
+
+/* tablet */
+@mixin display_tb {
+  @media (min-width: $tb-min) and (max-width: $tb-max) {
+    @content;
+  }
+}
+
+/* smart phone */
+@mixin display_sp {
+  @media (max-width: $sp-max) {
+    @content;
+  }
+}
