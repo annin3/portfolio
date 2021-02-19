@@ -1,29 +1,28 @@
-import VueRouter, { RouteConfig } from "vue-router";
-import Top from "../views/Top.vue";
-import Biography from "../views/Biography.vue";
-import Works from "../views/Works.vue";
-import Skills from "../views/Skills.vue";
+import Top from '../views/Top.vue';
+import Biography from '../views/Biography.vue';
+import Works from '../views/Works.vue';
+import Skills from '../views/Skills.vue';
 
 
-const routes: Array<RouteConfig> = [
+const routes = [
   {
-    path: "/",
-    name: "Top",
+    path: '/',
+    name: 'Top',
     component: Top,
   },
   {
-    path: "/biography",
-    name: "Biography",
+    path: '/biography',
+    name: 'Biography',
     component: Biography,
   },
   {
-    path: "/works",
-    name: "Works",
+    path: '/works',
+    name: 'Works',
     component: Works,
   },
   {
-    path: "/skills",
-    name: "Skills",
+    path: '/skills',
+    name: 'Skills',
     component: Skills,
   },
 ];

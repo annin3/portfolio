@@ -13,7 +13,7 @@ import Header from '@/components/Navigation/Header.vue';
 export default Vue.extend({
   name: 'App',
   components: {
-    Header
+    Header,
   },
 });
 </script>
