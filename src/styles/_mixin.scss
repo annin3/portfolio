@@ -13,6 +13,13 @@ $pc-min: $tb + px;
   }
 }
 
+/* tablet & PC*/
+@mixin display_tb_pc {
+  @media (min-width: $tb-min) {
+    @content;
+  }
+}
+
 /* tablet */
 @mixin display_tb {
   @media (min-width: $tb-min) and (max-width: $tb-max) {
