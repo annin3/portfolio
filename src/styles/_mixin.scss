@@ -1,11 +1,11 @@
 $sp: 600;
 $tb: 1024;
- 
-$sp-max: calc($sp - 1)px;
+
+$sp-max: calc($sp - 1) px;
 $tb-min: $sp + px;
-$tb-max: calc($tb - 1)px;
+$tb-max: calc($tb - 1) px;
 $pc-min: $tb + px;
- 
+
 /* PC */
 @mixin display_pc {
   @media (min-width: $pc-min) {

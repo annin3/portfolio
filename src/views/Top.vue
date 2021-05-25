@@ -11,20 +11,15 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 mb-3">
-          杏仁^3's Portfolio site
-        </h1>
+        <h1 class="display-2 mb-3">杏仁^3's Portfolio site</h1>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script lang="ts">
-  import { Component, Vue } from 'vue-property-decorator';
-  export default Vue.extend({
-    name: 'Top',
-
-    data: () => ({
-    }),
-  });
+import { Component, Vue } from "vue-property-decorator";
+export default Vue.extend({
+  name: "Top",
+});
 </script>

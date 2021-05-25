@@ -2,16 +2,16 @@
   <v-app>
     <Header />
     <main>
-      <router-view />
+      <router-view :class="$style.main" />
     </main>
   </v-app>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Header from '@/components/Navigation/Header.vue';
+import Vue from "vue";
+import Header from "@/components/Navigation/Header.vue";
 export default Vue.extend({
-  name: 'App',
+  name: "App",
   components: {
     Header,
   },
@@ -19,4 +19,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" module>
+.main {
+  width: 90%;
+  margin: 4rem auto;
+  max-width: 1200px;
+}
 </style>

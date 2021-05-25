@@ -1,12 +1,12 @@
 <template>
-  <div :class="$style.header">
+  <div>
     <v-app-bar app color="rgba(255, 255, 255, 0)" dense flat>
       <v-app-bar-nav-icon
         v-on:click="drawer = true"
         :class="$style.nav_icon"
       ></v-app-bar-nav-icon>
       <v-tabs :class="$style.nav_tabs">
-        <v-tab v-for="(routes, index) in routes" :key="index" :to="routes.path" >
+        <v-tab v-for="(routes, index) in routes" :key="index" :to="routes.path">
           {{ routes.name }}
         </v-tab>
       </v-tabs>
@@ -36,11 +36,11 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Emit } from 'vue-property-decorator';
-import routes from '@/router/routes.ts';
+import { Vue, Component } from "vue-property-decorator";
+import routes from "@/router/routes";
 
 @Component({
-  name: 'Header',
+  name: "Header",
 })
 export default class Header extends Vue {
   private drawer: boolean = false;
@@ -60,8 +60,5 @@ export default class Header extends Vue {
   @include display_tb_pc {
     display: block !important;
   }
-}
-.header {
-  padding-bottom: 8rem;
 }
 </style>
