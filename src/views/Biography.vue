@@ -3,23 +3,24 @@
     <div :class="$style.iconText">
       <v-img
         :src="require('../assets/icon.svg')"
-        class="my-3"
         contain
         height="300"
+				:class="$style.icon"
       />
       <div :class="$style.bio">
-        <div :class="$style.name">杏仁^３</div>
+        <div :class="$style.name">杏仁^３</div>
         <div :class="$style.belongs">
           <span>
             東京工業大学 システム制御系 B2 <br />
-            東京工業大学デジタル創作同好会traP 広報補佐 <br />
-            TitechApp Project
+            同 デジタル創作同好会traP 広報補佐 <br />
+            Titech App Project
           </span>
         </div>
         <div :class="$style.text">
           <p>
             フロントエンドを中心としたweb開発、ゲーム制作、デジタルイラストやUIデザインに興味があります。<br />
-            traPではサークル内で使われるwebアプリのフロントエンド開発やデザイン設計、及びゲーム開発を中心に活動しています。また、広報補佐として部員470名を超えるサークルの運営に携わっています。
+            traPではサークル内で使われるwebアプリのフロントエンド開発やデザイン設計、及びゲーム開発を中心に活動しています。また、広報補佐として部員470名を超えるサークルの運営に携わっています。<br>
+						大学では情報・制御工学を中心に学んでいます。
           </p>
         </div>
       </div>
@@ -31,17 +32,15 @@
             <v-list-item-title class="headline mb-1">
               デジタル創作同好会 traP
             </v-list-item-title>
-            <div :class="$style.text"
-              >東京工業大学・大岡山キャンパスを拠点に活動する創作・プログラミングの総合サークルです。</div
-            >
+            <div :class="$style.text">
+              東京工業大学・大岡山キャンパスを拠点に活動する創作・プログラミングの総合サークルです。
+            </div>
           </v-list-item-content>
         </v-list-item>
 
         <v-card-actions>
           <v-btn rounded text href="https://trap.jp/">
-            <v-icon color="grey"
-              >mdi-home</v-icon
-            >
+            <v-icon color="grey">mdi-home</v-icon>
           </v-btn>
           <v-btn
             rounded
@@ -49,9 +48,7 @@
             href="https://twitter.com/traPtitech"
             target="_blank"
           >
-            <v-icon color="#1DA1F2"
-              >mdi-twitter</v-icon
-            >
+            <v-icon color="#1DA1F2">mdi-twitter</v-icon>
           </v-btn>
           <v-btn
             rounded
@@ -67,19 +64,17 @@
         <v-list-item three-line>
           <v-list-item-content>
             <v-list-item-title class="headline mb-1">
-              TitechApp Project
+              Titech App Project
             </v-list-item-title>
-            <div :class="$style.text"
-              >東工大生向けのアプリやツールの開発を行っているサークルです。</div
-            >
+            <div :class="$style.text">
+              東工大生向けのアプリやツールの開発を行っているサークルです。
+            </div>
           </v-list-item-content>
         </v-list-item>
 
         <v-card-actions>
           <v-btn rounded text href="https://titech.app/">
-            <v-icon color="grey"
-              >mdi-home</v-icon
-            >
+            <v-icon color="grey">mdi-home</v-icon>
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -146,25 +141,20 @@ export default Vue.extend({
   display: inline-block;
   margin-bottom: 1rem;
 }
-.v-img {
-  flex: 1 0 0px;
-  max-width: 100%;
-  padding: 2rem;
-  display: inline-block;
+.icon {
+  margin: 2rem;
 }
 
 .cardWrapper {
   margin: 4rem 0;
 }
 .circleCard {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 .text {
   text-align: left;
   display: inline-block;
   overflow-wrap: break-word;
-  color: #808080;
+  color: #6d6d6d;
 }
-
 </style>
