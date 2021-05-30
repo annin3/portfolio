@@ -106,12 +106,12 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import history from "@/components/Biography/history";
+<script lang='ts'>
+import { Component, Vue } from 'vue-property-decorator';
+import history from '@/components/Biography/history';
 
 export default Vue.extend({
-  name: "Biography",
+  name: 'Biography',
 
   data: () => ({
     history: history,
