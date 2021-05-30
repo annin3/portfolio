@@ -51,7 +51,7 @@ const history = [
     pic: '/portfolio/src/assets/logo.svg',
     open: false,
     comment:
-      'traP部内webアプリ等の開発で使用。本サイトもvueを用いて制作しております。',
+      'ロゴデザイン制作にて使用',
   },
   {
     name: 'Adobe XD',
