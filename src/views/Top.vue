@@ -11,6 +11,9 @@
       </v-col>
 
       <v-col class="mb-4">
+        <v-if>
+          
+        </v-if>
         <h1 class="display-2 mb-3">杏仁^3's Portfolio site</h1>
       </v-col>
     </v-row>
