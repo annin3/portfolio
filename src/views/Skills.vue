@@ -76,8 +76,6 @@ export default Vue.extend({
   width: 100%;
   margin-right: 1rem;
 }
-.cardImg {
-}
 .more {
   display: flex;
 }

@@ -11,6 +11,17 @@
         </v-tab>
       </v-tabs>
       <v-spacer></v-spacer>
+      <v-btn
+        rounded
+        text
+        href="https://twitter.com/annin_rippo"
+        target="_blank"
+      >
+        <v-icon color="#1DA1F2">mdi-twitter</v-icon>
+      </v-btn>
+      <v-btn rounded text href="https://github.com/annin3" target="_blank">
+        <v-icon color="#24292e">mdi-github</v-icon>
+      </v-btn>
       <!-- <v-switch
         v-model="ex11"
         label="English"
