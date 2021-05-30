@@ -1,11 +1,11 @@
 <template>
   <div>
-    <v-app-bar app color="rgba(255, 255, 255, 0)" dense flat>
+    <v-app-bar app color="rgba(255, 255, 255)" dense>
       <v-app-bar-nav-icon
         v-on:click="drawer = true"
         :class="$style.nav_icon"
       ></v-app-bar-nav-icon>
-      <v-tabs :class="$style.nav_tabs">
+      <v-tabs :class="$style.nav_tabs" color="red">
         <v-tab v-for="(routes, index) in routes" :key="index" :to="routes.path">
           {{ routes.name }}
         </v-tab>
